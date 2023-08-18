@@ -1,0 +1,18 @@
+﻿<Window x:Class="TournamentPlanner.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TournamentPlanner"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="450" Width="800">
+    <Grid Name="mainMenu">
+        
+        <TextBlock Margin="271,52,170,325" FontSize="28">Tournament Planner</TextBlock>
+
+        <Button x:Name="matchScheduleBtn" Margin="309,137,309,239" Click="matchScheduleBtn_Click">Match Schedule</Button>
+        <Button x:Name="scoreBoardBtn" Margin="309,239,309,137" Click="scoreBoardBtn_Click">ScoreBoard</Button>
+        
+
+    </Grid>
+</Window>

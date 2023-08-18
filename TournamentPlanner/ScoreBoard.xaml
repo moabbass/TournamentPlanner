@@ -1,0 +1,46 @@
+﻿<Window x:Class="TournamentPlanner.ScoreBoard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TournamentPlanner"
+        mc:Ignorable="d"
+        Title="ScoreBoard" Height="450" Width="800">
+    <Grid x:Name="leaderBoard" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*" />
+
+            <RowDefinition Height="1*"  />
+
+        </Grid.RowDefinitions>
+
+        <ListView Grid.Row="0" x:Name="scoreBoardList" >
+
+            <ListView.View>
+
+                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Matches Schedule">
+
+                    <GridViewColumn DisplayMemberBinding="{Binding rank}" Header="Rank" Width="40" />
+
+                    <GridViewColumn DisplayMemberBinding="{Binding teamName}"  Header="Team Name" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding matchesWon}"  Header="Matches won" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding matchesLost}" Width="100" Header="Matches lost"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding winrate}" Width="100" Header="winrate"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding matchesPlayed}" Header="Matches played" Width="100"/>
+
+
+                </GridView>
+
+            </ListView.View>
+
+        </ListView>
+
+        <Button x:Name="TieBreakerBtn" Grid.Row="1" Margin="641,5,10,5" Visibility="Hidden" Click="TieBreakerBtn_Click"> Tie breaker Round</Button>
+
+    </Grid>
+
+</Window>
